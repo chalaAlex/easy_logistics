@@ -1,4 +1,7 @@
-import 'package:advanced_flutter/presentation/theme_manager.dart';
+import 'package:advanced_flutter/presentation/resources/color_manager.dart';
+import 'package:advanced_flutter/presentation/resources/routes_manager.dart';
+import 'package:advanced_flutter/presentation/resources/style_manager.dart';
+import 'package:advanced_flutter/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatefulWidget {
@@ -19,7 +22,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: getApplicationManager(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: RoutesManager.splashRoute,
+      theme: getApplicationTheme(),
     );
   }
 }

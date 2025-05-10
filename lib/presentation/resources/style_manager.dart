@@ -1,8 +1,8 @@
-import 'package:advanced_flutter/presentation/font_manager.dart';
+import 'package:advanced_flutter/presentation/resources/font_manager.dart';
 import 'package:flutter/material.dart';
 
 class StyleManager {
-  TextStyle _getTextStyle(
+  static TextStyle _getTextStyle(
       double fontsSize, String fontFamily, FontWeight fontWeight, Color color) {
     return TextStyle(
       fontSize: fontsSize,
@@ -13,31 +13,31 @@ class StyleManager {
   }
 
   // regular font Style
-  TextStyle getRegularStyle({double fontSize = 12, required Color color}) {
+  static TextStyle getRegularStyle({double fontSize = 12, required Color color}) {
     return _getTextStyle(
         fontSize, FontConstants.fontFamily, FontWeightManager.regular, color);
   }
 
   // light font style
-  TextStyle getLightStyle({double fontSize = 12, required Color color}) {
+  static TextStyle getLightStyle({double fontSize = 12, required Color color}) {
     return _getTextStyle(
         fontSize, FontConstants.fontFamily, FontWeightManager.light, color);
   }
 
   // bold font style
-  TextStyle getBoldStyle({double fontSize = 12, required Color color}) {
+  static TextStyle getBoldStyle({double fontSize = 12, required Color color}) {
     return _getTextStyle(
         fontSize, FontConstants.fontFamily, FontWeightManager.bold, color);
   }
 
   // semiBold font style
-  TextStyle getSemibOLDtStyle({double fontSize = 12, required Color color}) {
+  static TextStyle getSemiBoldStyle({double fontSize = 12, required Color color}) {
     return _getTextStyle(
         fontSize, FontConstants.fontFamily, FontWeightManager.semiBold, color);
   }
 
   // medium font style
-  TextStyle getMediumStyle({double fontSize = 12, required Color color}) {
+  static TextStyle getMediumStyle({double fontSize = 12, required Color color}) {
     return _getTextStyle(
         fontSize, FontConstants.fontFamily, FontWeightManager.medium, color);
   }
